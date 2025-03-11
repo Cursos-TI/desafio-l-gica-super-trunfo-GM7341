@@ -1,9 +1,9 @@
 #include <stdio.h>
 int main() {
-    // Menu
+    //Variaveis menu
     int opcao, opcao2, opcao3;
 
-    // Variáveis carta 1
+    //Variáveis carta 1
     char nomec[20];
     int pontosT;
     float pib, area, populacao;
@@ -12,7 +12,7 @@ int main() {
     float pibc, densidade;
     double superpoder;
 
-    // Variáveis carta 2
+    //Variáveis carta 2
     char nomec2[20];
     int pontosT2;
     float pib2, area2, populacao2;
@@ -21,6 +21,7 @@ int main() {
     float pibc2, densidade2;
     double superpoder2;
 
+    //Menu inicial
     printf("Menu Principal\n");
     printf("1. Iniciar Jogo\n");
     printf("2. Ver Regras\n");
@@ -46,7 +47,7 @@ int main() {
           return 0;
     }
 
-    // Entrada de dados
+    //Entrada de dados
     printf("\nDigite o código da cidade (por exemplo, A01, A02, B01, B02): ");
     scanf(" %c %d", &cod1, &cod2);
 
@@ -65,7 +66,7 @@ int main() {
     printf("\nDigite o número de pontos turísticos: ");
     scanf("%d", &pontosT);
 
-    // Entrada de dados 2
+    //Entrada de dados 2
     printf("\nDigite o código da cidade (por exemplo, A01, A02, B01, B02): ");
     scanf(" %c %d", &cod12, &cod22);
     
@@ -84,12 +85,12 @@ int main() {
     printf("\nDigite o número de pontos turísticos: ");
     scanf("%d", &pontosT2);
 
-    // Cálculos
+    //Cálculos
     densidade = populacao / area;
     pibc = pib / populacao;
     superpoder = populacao + area + pib + pontosT + pibc + densidade;
 
-    // Cálculos 2
+    //Cálculos 2
     densidade2 = populacao2 / area2;
     pibc2 = pib2 / populacao2;
     superpoder2 = populacao2 + area2 + pib2 + pontosT2 + pibc2 + densidade2;
@@ -252,6 +253,7 @@ int main() {
     printf("PIB per capita: %.3f / %.3f\n", pibc, pibc2);
     printf("Super poder: %.3f / %.3f\n", superpoder, superpoder2);
 
+    //Comparação final
     if(superpoder == superpoder2){
       printf("\nResultado final: Empate!");
     } else {
